@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Memória</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tela inicial: Entrada do nome do jogador -->
+  <div class="input-container">
+    <h1 class="title">Jogo de Memória</h1>
+    <div class="input-wrapper">
+      <h4>Digite seu nome para iniciar o jogo</h4>
+      <label for="playerName">Nome do Jogador:</label>
+      <input type="text" id="playerName" placeholder="Digite seu nome">
+      <button id="startButton">Iniciar Jogo</button>
+    </div>
+  </div>
+
+  <!-- Container principal do jogo (inicialmente oculto) -->
+  <div class="container" id="gameContainer" style="display: none;">
+    <h1 class="title">Jogo de Memória</h1>
+    <div id="playerDisplay" class="message"></div>
+    <div id="levelIndicator" class="level-indicator"></div>
+
+    <div class="row">
+      <div id="button1" class="button"></div>
+      <div id="button2" class="button"></div>
+      <div id="button3" class="button"></div>
+      <div id="button4" class="button"></div>
+      <div id="button5" class="button"></div>
+    </div>
+    <div class="row">
+      <div id="button6" class="button"></div>
+      <div id="button7" class="button"></div>
+      <div id="button8" class="button"></div>
+      <div id="button9" class="button"></div>
+      <div id="button10" class="button"></div>
+    </div>
+
+    <!-- Bloco do desafio final (Nível 2), inicialmente oculto -->
+    <div id="finalLevel" style="display: none;">
+      <h3>Desafio Final</h3>
+      <p id="finalPhaseIndicator">Fase 1</p>
+      <p>Digite a cor do botão:</p>
+      <input type="text" id="finalAnswer" placeholder="Digite a cor">
+      <button id="submitFinalAnswer">Enviar</button>
+    </div>
+
+    <div id="message" class="message"></div>
+  </div>
+
+  <!-- Tutorial em vídeo, inicialmente oculto -->
+  <div id="tutorial" class="tutorial" style="display: none;">
+    <div class="tutorial-content">
+      <video id="tutorialVideo" width="100%" controls autoplay loop>
+        <source src="video/tcc.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+      <h4>Para Jogar, clique em "OK"</h4>
+      <button id="closeTutorialButton">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
