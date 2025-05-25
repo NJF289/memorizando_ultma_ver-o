@@ -127,7 +127,7 @@ function checkPlayerMove(index) {
           button.classList.remove('active');
           button.style.backgroundColor = '';
         });
-        if (round < 5) {
+        if (round < 10) {
           nextRound();
         } else {
           transitionToFinalLevel();
